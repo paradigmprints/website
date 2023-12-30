@@ -63,6 +63,14 @@ const handleURL = async () => {
   if (location.length === 0) {
     location = "/";
   }
+  document
+      .querySelectorAll(".nav-link")
+      .forEach((ele) => {
+        ele.classList.remove("active-page")
+        if (ele.pathname === location) {
+          ele.classList.add("active-page");
+        }
+      });
   //   console.log(location);
   const route = routes[location] || routes["404"];
 

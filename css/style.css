@@ -3,10 +3,14 @@
 
 :root {
   font-size: 16px;
-  --color-1: #72fde2;
-  --color-2: #139bfc;
+  --color-1: #70c4b2;
+  --color-2: #1d6c76;
   --color-3: #fafafa;
-  --bg-color-1: #000907;
+  --color-4: #062530;
+  --color-5: #7e7e7e;
+  --color-6: #b15b00;
+  --color-7: #f2a812;
+  --bg-color-1: #000000;
   --bg-color-2: #fafafa;
   --transition-speed: 500ms
 }
@@ -30,6 +34,9 @@ body::-webkit-scrollbar {
     height: 75px;
 }
 
+/* .navbar-brand {
+    margin-right: 100px;
+} */
 .nav-link {
     color: var(--color-1);
 }
@@ -40,14 +47,15 @@ body::-webkit-scrollbar {
 }
   
 .active-page {
-    color: var(--color-3) !important;
+    color: var(--color-7) !important;
 }
 
 @keyframes nav-hover{
     0%{color: var(--color-1)}
-    100%{color: var(--color-3)}
+    100%{color: var(--color-7)}
 }
 
+/* Navbar animated toggler */
 .navbar-toggler {
     width: 20px;
     height: 20px;
@@ -121,17 +129,51 @@ body::-webkit-scrollbar {
     transform: rotate(0deg)
 }
 
+/* Home */
+
 .title-container {
     min-height: calc(100vh - 75px);
 }
 
 .title-1 {
     font-size: 2.5vw;
+    color: var(--color-7);
 }
 
 .title-2 {
     font-family: 'Dela Gothic One', sans-serif;
     font-size: 10vw;
+}
+
+.bounce-in {
+    animation: bounce-in 2s ease;
+}
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.services-container {
+    min-height: calc(100vh - 50px);
+}
+
+.services-card {
+    
+}
+
+.services-icon {
+    color: var(--color-6);
 }
 
 .statement-container {
@@ -142,6 +184,8 @@ body::-webkit-scrollbar {
     font-family: 'Martian Mono', monospace;
     font-size: 5vw;
 }
+
+/* Footer */
 
 .footer {
     height: 50px;
