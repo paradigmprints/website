@@ -5,19 +5,22 @@ class Navbar extends HTMLElement {
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid flex-row-reverse">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+
           </button>
           <div
             class="collapse navbar-collapse"
-            id="navbarNavAltMarkup"
+            id="navbarNav"
           >
             <nav class="navbar-nav w-100 justify-content-between">
               <a class="nav-link" href="/">HOME</a>
