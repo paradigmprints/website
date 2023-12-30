@@ -1,20 +1,9 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = 
-    `
+    this.innerHTML = `
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand h1" href="./">
-            <img
-              src="assets/PPLogo.JPEG"
-              alt="Logo"
-              width="30"
-              height="30"
-              class="d-inline-block align-text-top"
-            />
-            Paradigm Prints
-          </a>
+        <div class="container-fluid flex-row-reverse">
           <button
             class="navbar-toggler"
             type="button"
@@ -27,14 +16,14 @@ class Navbar extends HTMLElement {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse flex-row-reverse"
+            class="collapse navbar-collapse"
             id="navbarNavAltMarkup"
           >
-            <nav class="navbar-nav">
-              <a class="nav-link" href="/custom-prints">Custom Prints</a>
-              <a class="nav-link" href="/rent-a-printer">Rent a Printer</a>
-              <a class="nav-link" href="/contact-us">Contact Us</a>
-              <a href="#"></a>
+            <nav class="navbar-nav w-100 justify-content-between">
+              <a class="nav-link" href="/">HOME</a>
+              <a class="nav-link" href="/">CUSTOM PRINTS</a>
+              <a class="nav-link" href="/">PRINTER RENTALS</a>
+              <a class="nav-link" href="/">CONTACT US</a>
             </nav>
           </div>
         </div>
@@ -43,4 +32,4 @@ class Navbar extends HTMLElement {
   }
 }
 
-customElements.define('main-navbar', Navbar);
+customElements.define("main-navbar", Navbar);

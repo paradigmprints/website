@@ -60,7 +60,6 @@ const route = (url) => {
 // Handles the url routing
 const handleURL = async () => {
   let location = window.location.pathname; // get the url path from the click
-  console.log(`location: ${location}`);
   if (location.length === 0) {
     location = "/";
   }

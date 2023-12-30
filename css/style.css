@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Martian+Mono&display=swap');
+
+:root {
+  font-size: 16px;
+  --color-1: #72fde2;
+  --color-2: #139bfc;
+  --color-3: #fafafa;
+  --bg-color-1: #000907;
+  --bg-color-2: #fafafa;
+  --transition-speed: 500ms
+}
+
+body {
+  color: var(--color-1);
+  background: var(--bg-color-1);
+  margin: 0;
+  padding: 0;
+  font-family: 'Martian Mono', monospace;
+}
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 75px;
+}
+
+.nav-link {
+    color: var(--color-1);
+}
+
+.nav-link:hover{
+    animation: nav-hover var(--transition-speed);
+    animation-fill-mode: forwards;
+}
+  
+.active-page {
+    color: var(--color-3) !important;
+}
+
+@keyframes nav-hover{
+    0%{color: var(--color-1)}
+    100%{color: var(--color-3)}
+}
+
+.title-container {
+    min-height: calc(100vh - 75px);
+}
+
+.title-1 {
+    font-size: 2.5vw;
+}
+
+.title-2 {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 10vw;
+}
+
+.statement-container {
+    min-height: calc(100vh - 50px);
+}
+
+.statement {
+    font-family: 'Martian Mono', monospace;
+    font-size: 5vw;
+}
+
+.footer {
+    height: 50px;
+}
+
+/* MEDIA QUERY */
+
+/* Small >= 576px */
+@media(max-width: 576px) {
+    .footer {
+        font-size: 12px;
+    }
+}
+
+/* Medium >= 768px */
+@media(max-width: 768px) {
+
+}
+
+/* Large >= 992px */
+@media(max-width: 992px) {
+
+}
+
+/* Extra Large >= 1200px */
+@media(max-width: 1200px) {
+
+}
+
+
