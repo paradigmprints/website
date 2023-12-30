@@ -6,7 +6,7 @@ class Navbar extends HTMLElement {
   <div class="container-fluid">
     <a class="navbar-brand h1" href="./">
       <img
-        src="assets/logo.JPEG"
+        src="assets/logo.jpeg"
         alt="Logo"
         width="50"
         height="50"
