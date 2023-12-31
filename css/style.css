@@ -30,9 +30,9 @@ body::-webkit-scrollbar {
 }
 
 /* NAVBAR */
-.navbar {
+/* .navbar {
     height: 75px;
-}
+} */
 
 /* .navbar-brand {
     margin-right: 100px;
@@ -60,7 +60,6 @@ body::-webkit-scrollbar {
     width: 20px;
     height: 20px;
     position: relative;
-    margin-top: 10px;
     transition: .5s ease-in-out;
 }
 
@@ -129,10 +128,12 @@ body::-webkit-scrollbar {
     transform: rotate(0deg)
 }
 
+
+
 /* Home */
 
 .title-container {
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px - 50px);
 }
 
 .title-1 {
@@ -164,6 +165,17 @@ body::-webkit-scrollbar {
         transform: scale(1);
     }
 }
+
+.home-logo {
+    width: 15vw;
+    height:15vw;
+}
+
+.navbar-logo {
+    width: 50px;
+    height: 50px;
+}
+
 .services-container {
     min-height: calc(100vh - 50px);
 }
@@ -189,30 +201,5 @@ body::-webkit-scrollbar {
 
 .footer {
     height: 50px;
+    font-size: 0.75em;
 }
-
-/* MEDIA QUERY */
-
-/* Small >= 576px */
-@media(max-width: 576px) {
-    .footer {
-        font-size: 12px;
-    }
-}
-
-/* Medium >= 768px */
-@media(max-width: 768px) {
-
-}
-
-/* Large >= 992px */
-@media(max-width: 992px) {
-
-}
-
-/* Extra Large >= 1200px */
-@media(max-width: 1200px) {
-
-}
-
-

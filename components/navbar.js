@@ -3,16 +3,7 @@ class Navbar extends HTMLElement {
     this.innerHTML = `
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand h1" href="./">
-      <img
-        src="assets/logo.jpeg"
-        alt="Logo"
-        width="50"
-        height="50"
-        class="d-inline-block align-text-top"
-      />
-    </a>
+  <div class="container-fluid d-flex align-items-center flex-row-reverse">
     <button
       class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
       type="button"
@@ -27,7 +18,8 @@ class Navbar extends HTMLElement {
       <span class="toggler-icon bottom-bar"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <nav class="navbar-nav ms-auto">
+      <nav class="navbar-nav w-100 justify-content-between">
+        <a class="nav-link me-5" href="/">HOME</a>
         <a class="nav-link me-5" href="/custom">CUSTOM PRINTS</a>
         <a class="nav-link me-5" href="/rental">PRINTER RENTALS</a>
         <a class="nav-link" href="/contact">CONTACT US</a>
