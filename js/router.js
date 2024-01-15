@@ -24,27 +24,27 @@ const routes = {
   },
   "/": {
     template: "/pages/home.html",
-    title: "Home",
+    title: "Paradigm Prints",
     description: "home page",
   },
   "/index.html": {
     template: "/pages/home.html",
-    title: "Home",
+    title: "Paradigm Prints",
     description: "home page",
   },
-  "/contact-us": {
-    template: "/pages/contact-us.html",
-    title: "Contact Us",
+  "/c": {
+    template: "/pages/contact.html",
+    title: "Paradigm Prints | Contact",
     description: "Contact form page",
   },
-  "/custom-prints": {
-    template: "/pages/custom-prints.html",
-    title: "Custom Prints",
+  "/c": {
+    template: "/pages/customprints.html",
+    title: "Paradigm Prints | Custom Prints",
     description: "Custom prints form page",
   },
-  "/rent-a-printer": {
-    template: "/pages/rent-a-printer.html",
-    title: "Rent a Printer",
+  "/r": {
+    template: "/pages/printerrentals.html",
+    title: "Paradigm Prints | Printer Rentals",
     description: "Rent a printer form page",
   },
 };
@@ -53,6 +53,7 @@ const routes = {
 const route = (url) => {
   //   event = event || window.event;
   //   event.preventDefault();
+  console.log(url);
   window.history.pushState({}, "", url);
   handleURL();
 };
@@ -64,27 +65,39 @@ const handleURL = async () => {
     location = "/";
   }
   document
-      .querySelectorAll(".nav-link")
-      .forEach((ele) => {
-        ele.classList.remove("active-page")
-        if (ele.pathname === location) {
-          ele.classList.add("active-page");
-        }
-      });
-  //   console.log(location);
-  const route = routes[location] || routes["404"];
+    .querySelectorAll(".nav-link")
+    .forEach((ele) => {
+      ele.classList.remove("active-page")
+      if (ele.pathname === location) {
+        ele.classList.add("active-page");
+      }
+    });
 
-  try {
-    const html = await fetch(route.template).then((response) =>
-      response.text()
-    );
+  if (location === "/custom") {
+    window.open(
+      "https://forms.gle/CH7zee485X8UWkDk6", "_blank");
+  } else if (location === "/rental") {
+    window.open(
+      "https://forms.gle/wi5GEnRqt2HKVDJT6", "_blank");
+  } else if (location === "/contact") {
+    window.open(
+      "https://forms.gle/86hkESQuwstaN75x5", "_blank");
+  } else {
+    const route = routes[location] || routes["404"];
 
-    document.getElementById("content").innerHTML = html;
-    document.title = route.title;
-    document
-      .querySelector('meta[name="description"]')
-      .setAttribute("content", route.description);
-  } catch (error) {
-    console.error("Error fetching page's html:", error);
+    try {
+      const html = await fetch(route.template).then((response) =>
+        response.text()
+      );
+
+      document.getElementById("content").innerHTML = html;
+      document.title = route.title;
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute("content", route.description);
+    } catch (error) {
+      console.error("Error fetching page's html:", error);
+    }
   }
 };
+
