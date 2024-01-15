@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Martian+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Martian+Mono&display=swap");
 
 :root {
   font-size: 16px;
@@ -12,7 +12,7 @@
   --color-7: #f2a812;
   --bg-color-1: #000000;
   --bg-color-2: #fafafa;
-  --transition-speed: 500ms
+  --transition-speed: 500ms;
 }
 
 body {
@@ -20,13 +20,13 @@ body {
   background: var(--bg-color-1);
   margin: 0;
   padding: 0;
-  font-family: 'Martian Mono', monospace;
+  font-family: "Martian Mono", monospace;
 }
 
 /* SCROLLBAR */
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+  width: 0.25rem;
 }
 
 /* NAVBAR */
@@ -38,168 +38,223 @@ body::-webkit-scrollbar {
     margin-right: 100px;
 } */
 .nav-link {
-    color: var(--color-1);
+  color: var(--color-1);
 }
 
-.nav-link:hover{
-    animation: nav-hover var(--transition-speed);
-    animation-fill-mode: forwards;
+.nav-link:hover {
+  animation: nav-hover var(--transition-speed);
+  animation-fill-mode: forwards;
 }
-  
+
 .active-page {
-    color: var(--color-7) !important;
+  color: var(--color-7) !important;
 }
 
-@keyframes nav-hover{
-    0%{color: var(--color-1)}
-    100%{color: var(--color-7)}
+@keyframes nav-hover {
+  0% {
+    color: var(--color-1);
+  }
+  100% {
+    color: var(--color-7);
+  }
 }
 
 /* Navbar animated toggler */
 .navbar-toggler {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    transition: .5s ease-in-out;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
 }
 
 .navbar-toggler,
-.navbar-toggler:focus, 
+.navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-    border: 0;
+  outline: none;
+  box-shadow: none;
+  border: 0;
 }
 
 .navbar-toggler span {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .toggler-icon {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: var(--color-1);
-    border-radius: 1px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--color-1);
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
 }
 
 .middle-bar {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 /* Navigation Clicked */
 
 .navbar-toggler .top-bar {
-    margin-top: 0px;
-    transform: rotate(135deg);
+  margin-top: 0px;
+  transform: rotate(135deg);
 }
 
 .navbar-toggler .middle-bar {
-    opacity: 0;
-    filter: alpha(opacity=0);
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 
 .navbar-toggler .bottom-bar {
-    margin-top: 0px;
-    transform: rotate(-135deg);
+  margin-top: 0px;
+  transform: rotate(-135deg);
 }
 
 /* Navigation Collapsed */
 .navbar-toggler.collapsed .top-bar {
-    margin-top: -20px;
-    transform: rotate(0deg)
+  margin-top: -20px;
+  transform: rotate(0deg);
 }
 
 .navbar-toggler.collapsed .middle-bar {
-    opacity: 1;
-    filter: alpha(opacity=100);
-
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 .navbar-toggler.collapsed .bottom-bar {
-    margin-top: 20px;
-    transform: rotate(0deg)
+  margin-top: 20px;
+  transform: rotate(0deg);
 }
-
-
 
 /* Home */
 
 .title-container {
-    min-height: calc(100vh - 75px - 50px);
+  min-height: calc(100vh - 75px - 50px);
 }
 
 .title-1 {
-    font-size: 2.5vw;
-    color: var(--color-7);
+  font-size: 2.5vw;
+  color: var(--color-7);
 }
 
 .title-2 {
-    font-family: 'Dela Gothic One', sans-serif;
-    font-size: 10vw;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 10vw;
 }
 
 .bounce-in {
-    animation: bounce-in 2s ease;
+  animation: bounce-in 2s ease;
 }
 @keyframes bounce-in {
-    0% {
-        opacity: 0;
-        transform: scale(0.1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-    70% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .home-logo {
-    width: 15vw;
-    height:15vw;
+  width: 15vw;
+  height: 15vw;
 }
 
 .navbar-logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .services-container {
-    min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 .services-card {
-    
 }
 
 .services-icon {
-    color: var(--color-6);
+  color: var(--color-6);
 }
 
 .statement-container {
-    min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 .statement {
-    font-family: 'Martian Mono', monospace;
-    font-size: 5vw;
+  font-family: "Martian Mono", monospace;
+  font-size: 5vw;
 }
 
 /* Footer */
 
 .footer {
-    height: 50px;
-    font-size: 0.75em;
+  height: 50px;
+  font-size: 0.75em;
+}
+
+/**
+ * Basic CSS Media Query Template
+ * TODO: I should probably use Sass...
+ * Author: Michael Vieth
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet 
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    .home-logo {
+        width: 18vw;
+        height: 18vw;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .title-1 {
+    font-size: 2.75vw;
+    color: var(--color-7);
+  }
+
+  .home-logo {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .title-1 {
+    font-size: 3vw;
+    color: var(--color-7);
+  }
+  .home-logo {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles here */
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles here */
 }
