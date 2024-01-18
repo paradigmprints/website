@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // For navigation links
   document.addEventListener("click", (e) => {
     const { target } = e;
-    if (target.matches("nav a")) {
+    if (target.classList.contains("navigation")) {
       e.preventDefault();
       route(target.href);
     }
@@ -53,7 +53,6 @@ const routes = {
 const route = (url) => {
   //   event = event || window.event;
   //   event.preventDefault();
-  console.log(url);
   window.history.pushState({}, "", url);
   handleURL();
 };
@@ -73,16 +72,6 @@ const handleURL = async () => {
       }
     });
 
-  if (location === "/custom") {
-    window.open(
-      "https://forms.gle/CH7zee485X8UWkDk6", "_blank");
-  } else if (location === "/rental") {
-    window.open(
-      "https://forms.gle/wi5GEnRqt2HKVDJT6", "_blank");
-  } else if (location === "/contact") {
-    window.open(
-      "https://forms.gle/86hkESQuwstaN75x5", "_blank");
-  } else {
     const route = routes[location] || routes["404"];
 
     try {
@@ -98,6 +87,5 @@ const handleURL = async () => {
     } catch (error) {
       console.error("Error fetching page's html:", error);
     }
-  }
 };
 

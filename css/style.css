@@ -43,6 +43,10 @@ body::-webkit-scrollbar {
   animation-fill-mode: forwards;
 }
 
+.nav-link:focus {
+  color: var(--color-1);
+}
+
 .active-page {
   color: var(--color-7) !important;
 }
@@ -282,7 +286,7 @@ body::-webkit-scrollbar {
 
 @media all and (max-width: 480px) {
   .title-1 {
-    font-size: 3vw;
+    font-size: 0.9rem;
     color: var(--color-7);
   }
   .home-logo {
@@ -309,5 +313,9 @@ body::-webkit-scrollbar {
   .services-card {
     margin-top: 100px;
     min-height: auto;
+  }
+
+  .footer {
+    font-size: 0.7rem;
   }
 }

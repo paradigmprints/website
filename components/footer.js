@@ -2,7 +2,7 @@ class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <!-- Footer -->
-      <section class="container-fluid text-center">
+      <section class="container-fluid text-center footer">
         <p id="footer-content">
           Paradigm Prints &copy;
         </p>
