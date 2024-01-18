@@ -30,13 +30,10 @@ body::-webkit-scrollbar {
 }
 
 /* NAVBAR */
-/* .navbar {
+.navbar {
     height: 75px;
-} */
+}
 
-/* .navbar-brand {
-    margin-right: 100px;
-} */
 .nav-link {
   color: var(--color-1);
 }
@@ -134,7 +131,7 @@ body::-webkit-scrollbar {
 /* Home */
 
 .title-container {
-  min-height: calc(100vh - 75px - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 .title-1 {
@@ -177,37 +174,52 @@ body::-webkit-scrollbar {
   height: 50px;
 }
 
+/* SERVICES */
 .services-container {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 80px);
+  background-color: var(--bg-color-1);
+  padding:0px 50px;
+  margin-bottom: 2rem;
+}
+
+.services-title {
+  font-size: 5rem;
 }
 
 .services-card {
+  margin-top: 100px;
+  min-height: 500px;
 }
 
-.services-icon {
-  color: var(--color-6);
+.services-card-header{
+  font-size: 3rem;
+  color: var(--color-7);
+  padding: 1rem 0px;
 }
 
-.statement-container {
-  min-height: calc(100vh - 50px);
+.services-card-subheader{
+  font-size: 1.75rem;
 }
 
-.statement {
-  font-family: "Martian Mono", monospace;
-  font-size: 5vw;
+.services-card-p {
+  margin-top: 30px;
+  font-size: 1.25rem;
 }
 
-/* Footer */
-
-.footer {
-  height: 50px;
-  font-size: 0.75em;
+.btn-outline-info {
+  color: var(--color-7);
+  border-color: var(--color-2);
 }
+
+.btn-outline-info:hover {
+  color: var(--bg-color-1);
+  background-color: var(--color-1);
+  border-color: var(--color-2);
+}
+
 
 /**
  * Basic CSS Media Query Template
- * TODO: I should probably use Sass...
- * Author: Michael Vieth
  * ------------------------------------------
  *  Responsive Grid Media Queries - 1280, 1024, 768, 480
  *   1280-1024   - desktop (default grid)
@@ -220,11 +232,14 @@ body::-webkit-scrollbar {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .home-logo {
+    width: 18vw;
+    height: 18vw;
+  }
 
-    .home-logo {
-        width: 18vw;
-        height: 18vw;
-    }
+  .services-card-header {
+    font-size: 3rem;
+  }
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
@@ -237,6 +252,28 @@ body::-webkit-scrollbar {
     width: 20vw;
     height: 20vw;
   }
+
+  .services-title {
+    font-size: 4rem;
+  }
+
+  .services-card-header {
+    font-size: 2rem;
+  }
+
+  .services-card-subheader{
+    font-size: 1.25rem;
+  }
+  
+  .services-card-p {
+    font-size: 0.9rem;
+  }
+
+  .services-card {
+    margin-top: 100px;
+    min-height: auto;
+  }
+  
 }
 
 @media all and (max-width: 480px) {
@@ -248,13 +285,25 @@ body::-webkit-scrollbar {
     width: 25vw;
     height: 25vw;
   }
-}
 
-/* Portrait */
-@media screen and (orientation: portrait) {
-  /* Portrait styles here */
-}
-/* Landscape */
-@media screen and (orientation: landscape) {
-  /* Landscape styles here */
+  .services-title {
+    font-size: 3rem;
+  }
+
+  .services-card-header {
+    font-size: 1.2rem;
+  }
+
+  .services-card-subheader{
+    font-size: 1rem;
+  }
+  
+  .services-card-p {
+    font-size: 0.9rem;
+  }
+
+  .services-card {
+    margin-top: 100px;
+    min-height: auto;
+  }
 }
