@@ -204,6 +204,10 @@ body::-webkit-scrollbar {
 .services-card-p {
   margin-top: 30px;
   font-size: 1.25rem;
+} 
+
+.q {
+  color: var(--color-7);
 }
 
 .btn-outline-info {
