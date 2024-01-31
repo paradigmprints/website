@@ -1,26 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Martian+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Teko&family=Viga&family=Audiowide&family=Lalezar&family=Ubuntu&family=Josefin+Sans&family=Prompt&&family=Philosopher&display=swap');
 
 :root {
   font-size: 16px;
-  --color-1: #70c4b2;
-  --color-2: #1d6c76;
+  --color-1: #44705a;
+  --color-2: #8db5a0;
   --color-3: #fafafa;
-  --color-4: #062530;
+  --color-4: #18261f;
   --color-5: #7e7e7e;
-  --color-6: #b15b00;
-  --color-7: #f2a812;
-  --bg-color-1: #000000;
-  --bg-color-2: #fafafa;
+  --bg-color-1: #fafafa;
   --transition-speed: 500ms;
 }
 
 body {
-  color: var(--color-1);
-  background: var(--bg-color-1);
+  color: var(--color-4);
+  background: var(--color-2);
   margin: 0;
   padding: 0;
-  font-family: "Martian Mono", monospace;
+  font-family: 'Prompt', sans-serif;
+}
+
+.viga-font {
+  font-family: 'Viga', 'Sans serif';
 }
 
 /* SCROLLBAR */
@@ -31,11 +31,13 @@ body::-webkit-scrollbar {
 
 /* NAVBAR */
 .navbar {
-    height: 75px;
+  background-color: var(--color-2);
+  font-family: 'Viga', 'Sans serif';
+  font-size: 1.1rem;
 }
 
 .nav-link {
-  color: var(--color-1);
+  color: var(--color-4);
 }
 
 .nav-link:hover {
@@ -53,10 +55,10 @@ body::-webkit-scrollbar {
 
 @keyframes nav-hover {
   0% {
-    color: var(--color-1);
+    color: var(--color-4);
   }
   100% {
-    color: var(--color-7);
+    color: var(--color-1);
   }
 }
 
@@ -87,7 +89,7 @@ body::-webkit-scrollbar {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: var(--color-1);
+  background: var(--color-4);
   border-radius: 1px;
   opacity: 1;
   left: 0;
@@ -132,21 +134,95 @@ body::-webkit-scrollbar {
   transform: rotate(0deg);
 }
 
-/* Home */
+/* HOME */
 
-.title-container {
-  min-height: calc(100vh - 50px);
+.home-container {
+  padding: 10vh 0;
+  background-color: var(--color-2);
 }
 
 .title-1 {
-  font-size: 2.5vw;
+  font-size: 3rem;
   color: var(--color-7);
 }
 
 .title-2 {
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 10vw;
+  font-size: 10rem;
+  font-family: 'Viga', sans-serif;
 }
+
+/* ABOUT */
+
+.about-container {
+  background-color: var(--color-3);
+  padding: 10rem 1rem 10rem 3.5rem;
+}
+
+.logo {
+  width: 275px;
+}
+
+/* VALUES */
+.values-container {
+  padding: 7rem 3.5rem 7rem 3.5rem;
+  background-color: #dbdbdb;
+}
+
+.globe-icon {
+  width: 350px;
+}
+
+
+/* Services */
+
+.services-container {
+  background-color: var(--color-3);
+  padding: 5rem 3.5rem 7rem 3.5rem;
+}
+
+.services-icon {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.services-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid var(--color-1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.card h3,
+.card h5 {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.card h3,
+.card h5 {
+  margin-bottom: 10px;
+}
+
+/* Style for the buttons */
+.card a {
+  width: 200px;
+  margin: 0 auto;
+}
+
 
 .bounce-in {
   animation: bounce-in 2s ease;
@@ -158,164 +234,181 @@ body::-webkit-scrollbar {
   }
   50% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
   70% {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
   }
 }
 
-.home-logo {
-  width: 15vw;
-  height: 15vw;
+/* CONTACT SECTION */
+.contact-container {
+  padding: 7rem 3.5rem;
+  background-color: var(--color-2);
 }
 
-.navbar-logo {
-  width: 50px;
-  height: 50px;
-}
-
-/* SERVICES */
-.services-container {
-  min-height: calc(100vh - 80px);
-  background-color: var(--bg-color-1);
-  padding:0px 50px;
-  margin-bottom: 2rem;
-}
-
-.services-title {
-  font-size: 5rem;
-}
-
-.services-card {
-  margin-top: 100px;
-  min-height: 500px;
-}
-
-.services-card-header{
-  font-size: 3rem;
-  color: var(--color-7);
-  padding: 1rem 0px;
-}
-
-.services-card-subheader{
-  font-size: 1.75rem;
-}
-
-.services-card-p {
-  margin-top: 30px;
-  font-size: 1.25rem;
-} 
-
-.q {
+.contact-container h1,
+.contact-container h4 {
   color: var(--color-7);
 }
 
-.btn-outline-info {
-  color: var(--color-7);
-  border-color: var(--color-2);
+.contact-button {
+  background-color: var(--color-1); /* White color for the button */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn-outline-info:hover {
-  color: var(--bg-color-1);
-  background-color: var(--color-1);
-  border-color: var(--color-2);
+.contact-button p {
+  color: #555; /* Dark gray text color */
+  margin-bottom: 20px;
 }
 
-
-/**
- * Basic CSS Media Query Template
- * ------------------------------------------
- *  Responsive Grid Media Queries - 1280, 1024, 768, 480
- *   1280-1024   - desktop (default grid)
- *   1024-768    - tablet landscape
- *   768-480     - tablet 
- *   480-less    - phone landscape & smaller
- * --------------------------------------------
- */
-@media all and (min-width: 1024px) and (max-width: 1280px) {
+.custom-btn {
+  color: var(--color-4);
+  background-color: var(--color-3); 
+  border: 2px solid var(--color-1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .home-logo {
-    width: 18vw;
-    height: 18vw;
+.custom-btn:hover {
+  background-color: var(--color-1); /* Darker blue color on hover */
+  color: var(--color-3); /* White text color on hover */
+  border-color: var(--color-1); /* Darker blue border color on hover */
+}
+
+.footer {
+  background-color: var(--color-2);
+}
+
+/* Responsive Grid Media Queries */
+@media all and (min-width: 1280px) {
+  /* Styles for desktop screens (1280px and above) */
+  .globe-icon {
+    width: 350px;
   }
-
-  .services-card-header {
-    font-size: 3rem;
+  .logo {
+    width: 275px;
   }
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  /* Styles for tablet landscape screens (1024px - 1279px) */
+  .globe-icon {
+    width: 300px;
+  }
+  .logo {
+    width: 260px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablet screens (768px - 1023px) */
+  .services-card {
+    flex-direction: column;
+  }
+
   .title-1 {
-    font-size: 2.75vw;
-    color: var(--color-7);
+    font-size: 2rem;
+  }
+  .title-2 {
+    font-size: 5rem;
   }
 
-  .home-logo {
-    width: 20vw;
-    height: 20vw;
+  .globe-icon {
+    width: 250px;
+  }
+  .logo {
+    width: 200px;
   }
 
-  .services-title {
+}
+
+@media all and (max-width: 767px) {
+  /* Styles for phone landscape and smaller screens (up to 767px) */
+  .title-1 {
+    font-size: 2rem;
+  }
+  .title-2 {
+    font-size: 4.75rem;
+  }
+
+  /* About Container */
+.about-container {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+/* About Text */
+.about-container h1 {
+  font-size: 2.5rem;
+}
+
+/* About Image */
+.globe-icon {
+  width: 250px;
+}
+.logo {
+  width: 200px;
+}
+
+/* Values Container */
+.values-container {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.values-container h1 {
+  font-size: 2.5rem;
+}
+
+/* Values Globe Icon */
+.globe-icon {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+
+.services-container h1 {
+  font-size: 2.5rem;
+}
+
+/* Contact Container */
+.contact-container {
+  padding: 4rem 1.5rem;
+}
+
+/* Contact Button */
+.custom-btn {
+  padding: 8px 16px;
+}
+
+
+}
+
+/* Additional rules for smaller screens (optional) */
+@media all and (max-width: 480px) {
+  /* Styles for smaller screens (up to 480px) */
+  .title-1 {
+    font-size: 1.5rem;
+  }
+  .title-2 {
     font-size: 4rem;
   }
 
-  .services-card-header {
-    font-size: 2rem;
+  .globe-icon {
+    width: 225px;
+  }
+  .logo {
+    width: 150px;
   }
 
-  .services-card-subheader{
-    font-size: 1.25rem;
-  }
-  
-  .services-card-p {
-    font-size: 0.9rem;
-  }
-
-  .services-card {
-    margin-top: 100px;
-    min-height: auto;
-  }
-  
-}
-
-@media all and (max-width: 480px) {
-  .title-1 {
-    font-size: 0.9rem;
-    color: var(--color-7);
-  }
-  .home-logo {
-    width: 25vw;
-    height: 25vw;
-  }
-
-  .services-title {
-    font-size: 3rem;
-  }
-
-  .services-card-header {
-    font-size: 1.2rem;
-  }
-
-  .services-card-subheader{
-    font-size: 1rem;
-  }
-  
-  .services-card-p {
-    font-size: 0.9rem;
-  }
-
-  .services-card {
-    margin-top: 100px;
-    min-height: auto;
-  }
-
-  .footer {
-    font-size: 0.7rem;
-  }
 }

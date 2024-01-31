@@ -17,12 +17,12 @@ class Navbar extends HTMLElement {
       <span class="toggler-icon middle-bar"></span>
       <span class="toggler-icon bottom-bar"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <nav class="navbar-nav w-100 justify-content-between">
-        <a class="nav-link me-5 navigation" href="/">HOME</a>
-        <a class="nav-link me-5" href="https://forms.gle/CH7zee485X8UWkDk6" target="_blank">CUSTOM PRINTS</a>
-        <a class="nav-link me-5" href="https://forms.gle/wi5GEnRqt2HKVDJT6" target="_blank">PRINTER RENTALS</a>
-        <a class="nav-link" href="https://forms.gle/86hkESQuwstaN75x5" target="_blank">CONTACT US</a>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+      <nav class="navbar-nav">
+        <a class="nav-link navigation me-3" href="#home">HOME</a>
+        <a class="nav-link me-3" href="#about">ABOUT</a>
+        <a class="nav-link me-3" href="#services">SERVICES</a>
+        <a class="nav-link me-3" href="#contact">CONTACT</a>
       </nav>
     </div>
   </div>

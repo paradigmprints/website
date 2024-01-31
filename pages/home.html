@@ -1,60 +1,117 @@
 <!-- HOME PAGE -->
 <div
-  class="container-fluid title-container d-flex flex-column justify-content-center align-items-center text-center"
+  class="container-fluid home-container text-center" id="home"
 >
   <h5 class="title-1">Unleash your creativity with</h5>
   <h1 class="title-2 bounce-in">PARADIGM PRINTS</h1>
-  <img class="home-logo mt-4" src="assets\logo.jpeg" alt="" />
 </div>
-<!-- SERVICES SECTION -->
-<div class="container-fluid services-container">
-  <div class="text-center">
-    <h1 class="services-title">SERVICES</h1>
-  </div>
-  <div>
-    <div class="row">
-      <div class="services-card col-lg-6">
-        <h3 class="services-card-header text-center">
-          <i class="fa-solid fa-cubes fa-xl"></i> CUSTOM PRINTS
-        </h3>
-        <h5 class="services-card-subheader text-center">
-          Our team is excited to turn your 3D designs into reality!
-        </h5>
-        <p class="services-card-p text-center q">
-          Ready to bring your vision to life?  
-        </p>
-        <p class="services-card-p text-center">Click the button below to access
-          the form and share your STL files with us. Our team will handle the
-          rest with precision and expertise. Please ensure you are signed in to
-          a Google account to proceed.</p>
-        <div class="text-center">
-          <a class="btn btn-outline-info" href="https://forms.gle/CH7zee485X8UWkDk6" target="_blank">
-            Request Quote
-          </a>
-        </div>
+
+<!-- ABOUT SECTION -->
+<div id="about" class="container-fluid about-container">
+  <div class="row">
+    <div class="col-md-8 d-flex align-items-center justify-content-center">
+      <!-- Centered text content -->
+      <div>
+        <h1 class="viga-font">About Us</h1> <br>
+        <h3>Welcome to Paradigm Prints, where innovation meets precision in the world of 3D printing. </h3>
+        <br>
+        <h4>
+          As a cutting-edge start-up, we are revolutionizing the way ideas come to life through our comprehensive suite of 3D printing services. At Paradigm Prints, we are not just a 3D printing company; we are your partners in innovation. Join us on the forefront of technology, where limitless possibilities await. Your ideas, our expertise – together, let's shape the future.
+        </h4>
       </div>
-      <div class="services-card col-lg-6">
-        <h3 class="services-card-header text-center">
-          <i class="fa-solid fa-print fa-xl"></i> PRINTER RENTALS
-        </h3>
-        <h5 class="services-card-subheader text-center">
-          DIY lovers, we've got you covered! Rent our 3D printers for
-          convenient, hassle-free project printing.
-        </h5>
-        <p class="services-card-p text-center q">
-          Ready to kickstart your 3D printing journey?
-        </p>
-        <p class="services-card-p text-center">
-           Click the button below to
-          access the form. Whether you're a student or a professional, our team
-          is here to assist you every step of the way.
-        </p>
-        <div class="text-center">
-          <a type="button" class="btn btn-outline-info" href="https://forms.gle/wi5GEnRqt2HKVDJT6" target="_blank">
-            Request Quote
-          </a>
-        </div>
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <!-- Centered image -->
+      <img class="logo" src="assets\logo_svg-cropped.svg" alt=""/>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid values-container">
+  <div class="row">
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <img class="globe-icon" src="assets\earth-outline.svg" alt="" />
+    </div>
+    <div class="col-md-8 d-flex flex-column d-flex align-items-center justify-content-center">
+      <h1 class="viga-font">Our Values</h1><br>
+      <h3><strong>MISSION:</strong> Our mission is to effortlessly bring ideas to life through 3D printing.</h3><br>
+      <h3><strong>VISION:</strong> We see a world where individuals of all ages and backgrounds not only embrace the wonders of 3D printing but also possess the skills and knowledge to navigate its complexities with ease.</h3>
+      <br>
+      <br>
+      <h3>Join us on this journey as we work tirelessly to make 3D printing an indispensable tool, sparking the flames of curiosity in every household and ushering in a paradigm shift in how we perceive and interact with the world.</h3>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES SECTION -->
+<div class="container-fluid services-container text-center" id="services">
+  <h1 class="viga-font">SERVICES</h1>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row">
+    <div class="col-md-6 services-card">
+      <div class="card">
+        <img class="services-icon" src="assets\interview-icon.png" alt="" />
+        <h3>Consulting Excellence</h3>
+        <h5>We believe that every successful project starts with the right guidance. Our expert consultants work closely with clients to understand their vision, providing strategic insights and personalized recommendations to ensure a seamless 3D printing journey.</h5>
+        <a type="button" class="btn btn-secondary custom-btn" href="https://forms.gle/fxYMsaUmWdKQ8oFC8" target="_blank">
+          Learn More
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6 services-card">
+      <div class="card">
+        <img class="services-icon" src="assets\design-thinking-icon.png" alt="" />
+        <h3>Rapid Prototyping Mastery</h3>
+        <h5>Time is of the essence, and we understand the urgency of bringing your concepts to fruition. With our rapid prototyping service, witness your ideas materialize within a day. Our state-of-the-art technology ensures precision and speed, empowering you to iterate and innovate at an unprecedented pace.</h5>
+        <a type="button" class="btn btn-secondary custom-btn" href="https://forms.gle/2BJQa2jRSj3TBnyRA" target="_blank">
+          Learn More
+        </a>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6 services-card">
+      <div class="card">
+        <img class="services-icon" src="assets\3d-printing-icon.png" alt="" />
+        <h3>3D Printer Rentals</h3>
+        <h5>Not ready to commit to a long-term investment? Paradigm Prints offers flexible 3D printer rental options. Whether you're a small business testing the waters or an individual working on a short-term project, our diverse range of printers is at your disposal.</h5>
+        <a type="button" class="btn btn-secondary custom-btn" href="https://forms.gle/25YvcfZwayBfVeBt6" target="_blank">
+          Learn More
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6 services-card">
+      <div class="card">
+        <img class="services-icon" src="assets\online-training-icon.png" alt="" />
+        <h3>3D Printer Tutoring</h3>
+        <h5>Empower yourself with the knowledge to unleash the full potential of 3D printing. Our tutoring services cater to beginners and enthusiasts alike. Learn the ins and outs of 3D printing technology, software, and design, guided by our experienced tutors. Master the art of turning ideas into tangible creations.</h5>
+        <a type="button" class="btn btn-secondary custom-btn" href="https://forms.gle/s4x9qCTmLkM8ZYTj6" target="_blank">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6 services-card">
+      <div class="card">
+        <img class="services-icon" src="assets\tools-icon.png" alt="" />
+        <h3>Reliable 3D Printer Repair</h3>
+        <h5>Encountered a hiccup in your 3D printing journey? Fret not! Paradigm Prints provides reliable and efficient 3D printer repair services. Our skilled technicians are equipped to diagnose and fix issues promptly, ensuring minimal downtime for your projects.</h5>
+        <a type="button" class="btn btn-secondary custom-btn" href="https://forms.gle/TeVQKGp3nFMw1fyR9" target="_blank">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CONTACT SECTION -->
+<div class="container-fluid contact-container text-center" id="contact">
+  <h1 class="viga-font">Contact Us</h1>
+  <h4>Get in touch with Paradigm Prints Today!</h4>
+  <a href="https://forms.gle/86hkESQuwstaN75x5" target="_blank" class="btn btn-primary custom-btn">Contact Form</a>
+</div>
+
 </div>
