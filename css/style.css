@@ -353,12 +353,12 @@ body::-webkit-scrollbar {
   font-size: 2.5rem;
 }
 
-/* About Image */
 .globe-icon {
   width: 250px;
 }
 .logo {
   width: 200px;
+  margin-top: 3rem;
 }
 
 /* Values Container */
@@ -369,6 +369,7 @@ body::-webkit-scrollbar {
 
 .values-container h1 {
   font-size: 2.5rem;
+  margin-top: 3rem;
 }
 
 /* Values Globe Icon */
